@@ -9,6 +9,9 @@ public class Board {
 		this.board = newboard;
 	}
 
+	public String[][] getBoard(){
+		return this.board;
+	}
 	public int BoardSize() {
 		return dimensions;
 	}
@@ -24,6 +27,10 @@ public class Board {
 			System.out.println();
 		}
 	}
-	
-	
+	public boolean cellMoveable(int i, int j) {
+		return false;
+	}
+
+
+
 }

@@ -10,13 +10,5 @@ public class Simulation {
         Board board = new Board(bd);
         System.out.println(board.BoardSize());
         System.out.println(board.getCell(0,0));
-
-
-
-
-
-
-
-
     }
 }
