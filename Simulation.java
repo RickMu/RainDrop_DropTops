@@ -5,10 +5,11 @@ public class Simulation {
 
     public static void main(String[] args){
 
-        String[][] bd=Utility.readInputFile("C:\\Users\\Rick\\IdeaProjects\\RainDrop-Droptops\\src\\inputs");
+        String[][] bd=Utility.readInputFile("C:\\Users\\Rick\\IdeaProjects\\RainDrop-Droptops\\src\\inputs.txt");
 
         Board board = new Board(bd);
         System.out.println(board.BoardSize());
         System.out.println(board.getCell(0,0));
+        board.printBoard();
     }
 }
