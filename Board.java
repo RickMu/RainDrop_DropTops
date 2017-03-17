@@ -56,12 +56,16 @@ public class Board {
 
 	public boolean pieceMoveable(int i, int j) {
 		// Check right.
-		if (j+1 <= dimensions && board[i][j+1] == "+") {return true;}
-		// Check up.
-		if (i-1 < 0 && board[i][j+1] == "+" ) {return true;}
-		// Check down.
-		if (i+1 <=dimensions && board[i+1][j] == "+" ) {return true;}
-		return false;
+		if (i<0 || i>=this.getDimensions()) {
+			return false;
+		}
+		if (j<0 || j>=this.getDimensions()) {
+			return false;
+		}
+		if (! board[i][j].equals( "+")) {
+			return false;
+		}
+		return true;
 	}
 
 

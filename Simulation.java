@@ -8,8 +8,13 @@ public class Simulation {
         String[][] bd=Utility.readInputFile("C:\\Users\\Rick\\IdeaProjects\\RainDrop-Droptops\\src\\inputs.txt");
 
         Board board = new Board(bd);
-        System.out.println(board.BoardSize());
+        System.out.println(board.getDimensions());
         System.out.println(board.getCell(0,0));
+
+        Game g = new Game(board);
+        System.out.println(g.checkMovesForH());
+        System.out.println(g.checkMovesForV());
+
         board.printBoard();
     }
 }
