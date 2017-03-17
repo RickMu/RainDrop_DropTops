@@ -14,24 +14,35 @@ public class Game {
         }
     }
 
-
-
     Game(Board board){
         players = new Player[2];
         players[0] = new Player(PLAYER_H);
         players[1] = new Player (PLAYER_V);
         this.board= board;
     }
+
+    public int checkMovesForH(){
+
+        return checkPossibleMoves(players[0]);
+    }
+
+    public int checkMovesForV(){
+
+        return checkPossibleMoves(players[1]);
+    }
+
+
+
     public int checkPossibleMoves(Player player){
         int totalMoves =0;
         Board tmpBoard= this.board;
 
         if(player.getSymbol()== PLAYER_V){
-            /**Roatate board*/
+            tmpBoard = Board.rotateBoard(this.board);
         }
 
-        for( int i=0 ; i<tmpBoard.BoardSize(); i++){
-            for(int j=0 ; j<tmpBoard.BoardSize();j++){
+        for( int i=0 ; i<tmpBoard.getDimensions(); i++){
+            for(int j=0 ; j<tmpBoard.getDimensions();j++){
                 if(tmpBoard.getCell(i,j).equals( player.getSymbol())){
                     totalMoves+= checkMoves(tmpBoard, i ,j);
                 }
@@ -44,11 +55,11 @@ public class Game {
         int UP=-1, DOWN=1,RIGHT=1;
         int numMoves=0;
 
-        if( board.cellMoveable(i+UP, j))
+        if( board.pieceMoveable(i+UP, j))
             numMoves+=1;
-        if( board.cellMoveable(i+DOWN,j))
+        if( board.pieceMoveable(i+DOWN,j))
             numMoves+=1;
-        if( board.cellMoveable(i, j+RIGHT))
+        if( board.pieceMoveable(i, j+RIGHT))
             numMoves+=1;
 
         return numMoves;
