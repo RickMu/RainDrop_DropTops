@@ -15,6 +15,7 @@ public class Board {
 		//this.board = newboard;
 	}
 	/** Returns the size of the board. */
+
 	public int getDimensions() {
 		return dimensions;
 	}
@@ -65,3 +66,4 @@ public class Board {
 
 
 }
+
