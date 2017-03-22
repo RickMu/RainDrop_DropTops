@@ -1,6 +1,3 @@
-/**
- * Created by 高静 on 2017/3/15.
- */
 public class Simulation {
 
     public static void main(String[] args){
