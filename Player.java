@@ -1,6 +1,4 @@
-/**
- * Created by 高静 on 2017/3/15.
- */
+/** Ibrahim Ahmed #757050 | Rick Mu #758667*/
 public class Player {
     private String symbol;
 
