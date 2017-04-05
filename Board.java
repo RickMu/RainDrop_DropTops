@@ -1,3 +1,4 @@
+/** Ibrahim Ahmed #757050 | Rick Mu #758667 */
 public class Board {
 
 	private int dimensions;
@@ -14,24 +15,28 @@ public class Board {
 		}
 		//this.board = newboard;
 	}
+	
 	/** Returns the size of the board. */
-
 	public int getDimensions() {
 		return dimensions;
 	}
+	
 	/** Gets the value of the cell in (i,j). */
 	public String getCell(int i, int j) {
 		String thiscell = board[i][j];
 		return thiscell;
 	}
+	
 	/** Changes the value of the cell (i,j) for this board. */
 	public void changeCell(int i, int j, String value) {
 		this.board[i][j] = value;
 	}
+	
 	/** Returns the 2d array of this board. */
 	public String[][] getBoard() {
 		return this.board;
 	}
+	
 	/** Prints the board. */
 	public void printBoard(){
 		for(String[] row: board) {
@@ -54,8 +59,8 @@ public class Board {
 		return rotatedBoard;
 	}
 
+	/** Checks if a piece in a cell location is moveable. */
 	public boolean pieceMoveable(int i, int j) {
-		// Check right.
 		if (i<0 || i>=this.getDimensions()) {
 			return false;
 		}
