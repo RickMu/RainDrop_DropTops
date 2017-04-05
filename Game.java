@@ -1,6 +1,4 @@
-/**
- * Created by 高静 on 2017/3/15.
- */
+
 public class Game {
     public static String PLAYER_H= "H", PLAYER_V ="V";
     private Board board;

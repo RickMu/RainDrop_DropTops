@@ -3,9 +3,12 @@ public class Board {
 	private int dimensions;
 	private String[][] board;
 
+	/**Set dimensions of board and board*/
 	public Board(String[][] newboard) {
 		this.dimensions = newboard.length;
 		int i,j;
+
+		/**Getting a copy of the board*/
 		board = new String[dimensions][dimensions];
 		for (i=0;i<dimensions;i++) {
 			for (j=0;j<dimensions;j++) {
@@ -15,23 +18,30 @@ public class Board {
 		//this.board = newboard;
 	}
 	/** Returns the size of the board. */
-
 	public int getDimensions() {
 		return dimensions;
 	}
+
+
 	/** Gets the value of the cell in (i,j). */
 	public String getCell(int i, int j) {
 		String thiscell = board[i][j];
 		return thiscell;
 	}
+
+
 	/** Changes the value of the cell (i,j) for this board. */
 	public void changeCell(int i, int j, String value) {
 		this.board[i][j] = value;
 	}
+
+
 	/** Returns the 2d array of this board. */
 	public String[][] getBoard() {
 		return this.board;
 	}
+
+
 	/** Prints the board. */
 	public void printBoard(){
 		for(String[] row: board) {
@@ -40,6 +50,7 @@ public class Board {
 			System.out.println();
 		}
 	}
+
 
 	/** Rotates board clockwise. */
 	public static Board rotateBoard(Board board) {
@@ -54,6 +65,8 @@ public class Board {
 		return rotatedBoard;
 	}
 
+
+	/**Check if the position is valid or moveable*/
 	public boolean pieceMoveable(int i, int j) {
 		// Check right.
 		if (i<0 || i>=this.getDimensions()) {
