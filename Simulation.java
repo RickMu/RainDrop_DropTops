@@ -10,6 +10,7 @@ public class Simulation {
         //System.out.println(board.getCell(0,0));
 
         Game g = new Game(board);
+
         System.out.println(g.checkMovesForH());
         System.out.println(g.checkMovesForV());
 

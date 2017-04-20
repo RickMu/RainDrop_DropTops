@@ -1,4 +1,4 @@
-/** Ibrahim Ahmed #757050 | Rick Mu #758667 */
+/** Ibrahim Ahmed #757050 | Rick Mu #758667*/
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;

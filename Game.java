@@ -1,4 +1,4 @@
-/** Ibrahim Ahmed #757050 | Rick Mu #758667 */
+/** Ibrahim Ahmed #757050 | Rick Mu #758667*/
 
 public class Game {
     public static String PLAYER_H= "H", PLAYER_V ="V";
